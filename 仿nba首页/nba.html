@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>NBA</title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
+	<style type="text/css">
+		*{margin:0;padding:0}
+		body{
+			background: lightblue
+		}
+		a{text-decoration:none}
+		ul,li,ol{list-style:none}
+		 header{
+			 background-color:#006bb7;
+			 color:white
+			 }
+		.nav-left a{color:white}
+		.nav > li > a:hover, .nav > li > a:focus{background-color:#006bb7}
+		.nav .open > a, .nav .open > a:hover, .nav .open > a:focus{
+			background-color:#002f50
+		}
+		.pt20{padding-top:20px}
+		.container{width:1200px;margin:0 auto}
+		.cl{clear:both}
+		.fl{float:left}
+		.fr{float:right}
+		.content>div{padding-top:20px}
+		.footlist{height:100px}
+		.footlist dl{float:left;margin-right:117px}
+		.footlist dl>dt{margin-bottom:20px}
+		.foottitle {margin:50px auto;text-align:center}
+		.ol2k{width:1197px;height:150px;background: white}
+		.yaowen>div{float:left;margin-right:10px;height:320px}
+		.yaowen-l{width:450px;height:320px;overflow:hidden}
+		.yaowen-c{width:370px;}
+		.yaowen-c>div{padding-bottom:5px;border-bottom:1px solid black;margin-top:10px}
+		.yaowen-r{margin-left:10px}
+		.ywr-s{text-align:right}
+		.lb-a{width:50px;height:50px;
+				text-align:center;
+				font-size:30px;
+				position:absolute;
+				top:50%;
+				margin-top:-25px}
+	</style>
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="jquery-1.12.4.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="bootstrap.js"></script>
+  </head>
+  <body>
+   <header>
+		<div class="logo container">
+			<div class="logo-left fl">
+				<a href="#"><img src="image/1.jpg"></a>
+			</div>
+			<div class="logo-right fr row" style="width:500px">
+				<div class="col-md-2">球迷</div>
+				<div class="col-md-2">jr</div>
+				<div class="col-md-2">APP</div>
+				<div class="col-md-2">天天</div>
+				<div class="col-md-2">乐园</div>
+				<div class="col-md-2">store</div>
+			</div>
+		</div>
+		<nav class="container">
+			<div class="nav-left fl">
+				<ul class="nav nav-pills">
+				  <li role="presentation"><a href="#">首页</a></li>
+				  <li role="presentation"><a href="#">视频</a></li>
+				  <li role="presentation"><a href="#">新闻</a></li>
+				  <li role="presentation"><a href="#">图集</a></li>
+				  <li role="presentation">
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+				  球赛 <span class="caret"></span></a>
+					  <ul class="dropdown-menu">
+						<li><a href="#">Action</a></li>
+						<li><a href="#">Another action</a></li>
+						<li><a href="#">Something else here</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="#">Separated link</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="#">One more separated link</a></a></li>
+						</ul>
+					</li>
+				  <li role="presentation"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+				  球员 <span class="caret"></span></a>
+					  <ul class="dropdown-menu">
+						<li><a href="#">Action</a></li>
+						<li><a href="#">Another action</a></li>
+						<li><a href="#">Something else here</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="#">Separated link</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="#">One more separated link</a></a></li>
+						</ul>
+					</li>
+				  <li role="presentation"><a href="#">赛程</a></li>
+				  <li role="presentation"><a href="#">排名</a></li>
+				  <li role="presentation"><a href="#">数据</a></li>
+				  <li role="presentation"><a href="#">专题</a></li>
+				  <li role="presentation"><a href="#">更多</a></li>
+				</ul>
+			</div>
+			<div class="nav-right fr"  style="width:250px">
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="搜全文">
+					<span class="input-group-addon" id="sizing-addon2">@</span>
+				</div>
+			</div>
+		</nav>
+   </header>
+	
+	<div class="content container">
+		<div class="c-top">
+			<div class="ol2k">
+				<a href="#"><img src="image/2.jpg"></a>
+			</div>
+			<div class="yaowen">
+				<div class="yaowen-l">
+					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+							  <!-- Indicators -->
+							  <ol class="carousel-indicators">
+								<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+								<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+								<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+							  </ol>
+
+							  <!-- Wrapper for slides -->
+							  <div class="carousel-inner" role="listbox">
+								<div class="item active">
+								  <img src="image/lb/1.jpg" alt="1">
+								  <div class="carousel-caption">
+									米切尔晒出了一组自己在上海参加NBA 2K Online2活动时的照片，并写到：“上海真是太酷了！感谢2K在中国把
+								  </div>
+								</div>
+								<div class="item">
+								  <img src="image/lb/2.jpg" alt="2">
+								  <div class="carousel-caption">
+									勒布朗-詹姆斯捐资成立的学校I Promise School在昨天揭幕，该所学校将会以两个年级开班，分别是三年级和四年级，未来将会开设更多的年级。该学校有以下福利政策：
+								  </div>
+								</div>
+								<div class="item">
+								  <img src="image/lb/3.jpg" alt="3">
+								  <div class="carousel-caption">
+									2K官方晒出詹姆斯身披湖人最新款战袍游戏照，这表情真心霸气啊
+								  </div>
+								</div>
+							  </div>
+
+							  <!-- Controls -->
+							 <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+										<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+										<span class="sr-only">Previous</span>
+									  </a>
+									  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+										<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+										<span class="sr-only">Next</span>
+									  </a>
+							</div>
+					</div>
+				<div class="yaowen-c">
+					<div class="media">
+						  <div class="media-left media-middle">
+							<a href="#">
+							  <img class="media-object" src="image/lb/4.jpg" alt="1">
+							</a>
+						  </div>
+						  <div class="media-body">
+							<h4 class="media-heading">8.2社交媒体动态 众星齐晒训练照</h4>
+						  </div>
+					</div>
+					<div class="media">
+						  <div class="media-left media-middle">
+							<a href="#">
+							  <img class="media-object" src="image/lb/5.jpg" alt="1">
+							</a>
+						  </div>
+						  <div class="media-body">
+							<h4 class="media-heading">8.2社交媒体动态 众星齐晒训练照</h4>
+						  </div>
+					</div>
+					<div class="media">
+						  <div class="media-left media-middle">
+							<a href="#">
+							  <img class="media-object" src="image/lb/6.jpg" alt="1">
+							</a>
+						  </div>
+						  <div class="media-body">
+							<h4 class="media-heading">8.2社交媒体动态 众星齐晒训练照</h4>
+						  </div>
+					</div>
+					<div class="media">
+						  <div class="media-left media-middle">
+							<a href="#">
+							  <img class="media-object" src="image/lb/7.jpg" alt="1">
+							</a>
+						  </div>
+						  <div class="media-body">
+							<h4 class="media-heading">8.2社交媒体动态 众星齐晒训练照</h4>
+						  </div>
+					</div>
+				</div>
+				<div class="yaowen-r" style="width:300px">
+					<div class="ywr-s"><a href="#">换一换</a></div>
+					<div class="ywr-x">
+					<p><a href="#">澄清期已过 安东尼已经成为完全自由球员</a></p>
+					<p><a href="#">澄清期已过 安东尼已经成为完全自由球员</a></p>
+					<p><a href="#">澄清期已过 安东尼已经成为完全自由球员</a></p>
+					<p><a href="#">澄清期已过 安东尼已经成为完全自由球员</a></p>
+					<p><a href="#">澄清期已过 安东尼已经成为完全自由球员</a></p>
+					<p><a href="#">澄清期已过 安东尼已经成为完全自由球员</a></p>
+					<p><a href="#">澄清期已过 安东尼已经成为完全自由球员</a></p>
+					<p><a href="#">澄清期已过 安东尼已经成为完全自由球员</a></p>
+					<p><a href="#">澄清期已过 安东尼已经成为完全自由球员</a></p>
+					<p><a href="#">澄清期已过 安东尼已经成为完全自由球员</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="zxzx cl">
+		<style>
+			.zxzx-l{width:67%}
+			.zxzx-r{width:30%}
+			.zxl-h{height:50px}
+			.zxl-b{margin-top:10px}
+			.zxs-b{position:relative;display:block;margin-right:10px}
+			.zxs-b>img{height:260px;width:100%}
+			.zxs-b>span{height:35px;width:100%;background:black;color:white;position:absolute;bottom:0px;left:0}
+			.zx-s>a{float:left;margin:10px;width:45%;margin-right:5px}
+			.zxx-time{text-align:right;margin-top:10px}
+			.zxx-b>img{width:100%;height:180px}
+			.zx-x>div{float:left;margin:15px;width:215px}
+			.gdzx{height:20px;background:lightblue;color:white;text-align:center}
+		</style>
+			<div class="zxzx-l fl">
+				<div class="zxl-h">
+					<a href="#" class="fl">最新资讯</a>
+					<a href="#" class="fr">添加主队</a>
+				</div>
+				<div class="hyh" style="text-align:right"><a href="#">换一换</a></div>
+				<div class="zxl-b">
+					<div class="zx-s">
+						<a href="#" class="zxs-b">
+							<img src="image/zxzx/1.jpg" alt="123">
+							<span>球爹：朗佐是湖人领袖 詹姆斯无法教他什么</span>
+						</a>
+						<a href="#" class="zxs-b">
+							<img src="image/zxzx/2.jpg" alt="123">
+							<span>官方：克拉克森无权代表菲律宾参加亚运会</span>
+						</a>
+					</div>
+					<div class="zx-x cl">
+						<div class="zxx-b">
+							<img src="image/zxzx/3.jpg" alt="123">
+							<a href="#">
+								<div>幕后NBA：当精神健康问题不再匿影藏形</div> 
+								<div class="zxx-time">2018-08-12 16:44</div>
+							</a>
+						</div>
+						<div class="zxx-b">
+							<img src="image/zxzx/4.jpg" alt="123">
+							<a href="#">
+								<div>NBA公布新赛季关键日期：常规赛10月17日揭幕</div> 
+								<div class="zxx-time">2018-08-12 15:15</div>
+							</a>
+						</div>
+						<div class="zxx-b">
+							<img src="image/zxzx/5.jpg" alt="123">
+							<a href="#">
+									<div>视频-库里背后运球过人剪辑</div> 
+									<div class="zxx-time">2018-08-12 14:32</div>
+								</a>
+						</div>
+					</div>
+					<div class="gdzx cl"><a href="#">更多资讯 &gt </a></div>
+				</div>
+			</div>
+			<div class="zxzx-r fr">
+				<ul class="nav nav-tabs" role="tablist">
+					<li class="active">
+						<a href="#tab-chrome" role="tab" data-toggle="tab">联盟排名</a>
+					</li>
+					<li>
+						<a href="#tab-firefox" role="tab" data-toggle="tab">分区排名</a>
+					</li>
+				</ul>
+				<!--标签的内容-->
+				<div class="tab-content">
+					<div class="tab-pane active" id="tab-chrome">
+					  <ul class="nav nav-tabs" role="tablist">
+							<li class="active">
+								<a href="#tab-east" role="tab" data-toggle="tab">东部联盟</a>
+							</li>
+							<li>
+								<a href="#tab-west" role="tab" data-toggle="tab">西部联盟排名</a>
+							</li>
+						</ul>
+						<div class="tab-content">
+							<div class="tab-pane active" id="tab-east">
+								<table class="table">
+									<tr>
+										<th>排名</th>
+										<th>姓名</th>
+										<th>胜</th>
+										<th>负</th>
+										<th>胜场差</th>
+									</tr>
+									<tr>
+										<td>01</td>
+										<td>猛龙</td>
+										<td>59</td>
+										<td>23</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>02</td>
+										<td>凯尔特人</td>
+										<td>59</td>
+										<td>23</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>03</td>
+										<td>76人</td>
+										<td>59</td>
+										<td>23</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>04</td>
+										<td>骑士</td>
+										<td>59</td>
+										<td>23</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>05</td>
+										<td>步行者</td>
+										<td>59</td>
+										<td>23</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>06</td>
+										<td>热火</td>
+										<td>59</td>
+										<td>23</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>07</td>
+										<td>雄鹿</td>
+										<td>59</td>
+										<td>23</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>08</td>
+										<td>奇才</td>
+										<td>59</td>
+										<td>23</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>09</td>
+										<td>活塞</td>
+										<td>59</td>
+										<td>23</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>10</td>
+										<td>黄蜂</td>
+										<td>59</td>
+										<td>23</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>11</td>
+										<td>尼克斯</td>
+										<td>59</td>
+										<td>23</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>12</td>
+										<td>篮网</td>
+										<td>59</td>
+										<td>23</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>13</td>
+										<td>公牛</td>
+										<td>59</td>
+										<td>23</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>14</td>
+										<td>魔术</td>
+										<td>59</td>
+										<td>23</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>15</td>
+										<td>老鹰</td>
+										<td>59</td>
+										<td>23</td>
+										<td>0</td>
+									</tr>
+								</table>
+							</div>
+							<div class="tab-pane" id="tab-west">
+									<table class="table">
+											<tr>
+												<th>排名</th>
+												<th>姓名</th>
+												<th>胜</th>
+												<th>负</th>
+												<th>胜场差</th>
+											</tr>
+											<tr>
+												<td>01</td>
+												<td>火箭</td>
+												<td>59</td>
+												<td>23</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<td>02</td>
+												<td>勇士</td>
+												<td>59</td>
+												<td>23</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<td>03</td>
+												<td>开拓者</td>
+												<td>59</td>
+												<td>23</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<td>04</td>
+												<td>雷霆</td>
+												<td>59</td>
+												<td>23</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<td>05</td>
+												<td>爵士</td>
+												<td>59</td>
+												<td>23</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<td>06</td>
+												<td>鹈鹕</td>
+												<td>59</td>
+												<td>23</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<td>07</td>
+												<td>马刺</td>
+												<td>59</td>
+												<td>23</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<td>08</td>
+												<td>森林狼</td>
+												<td>59</td>
+												<td>23</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<td>09</td>
+												<td>掘金</td>
+												<td>59</td>
+												<td>23</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<td>10</td>
+												<td>快船</td>
+												<td>59</td>
+												<td>23</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<td>11</td>
+												<td>湖人</td>
+												<td>59</td>
+												<td>23</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<td>12</td>
+												<td>国王</td>
+												<td>59</td>
+												<td>23</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<td>13</td>
+												<td>独行侠</td>
+												<td>59</td>
+												<td>23</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<td>14</td>
+												<td>灰熊</td>
+												<td>59</td>
+												<td>23</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<td>15</td>
+												<td>太阳</td>
+												<td>59</td>
+												<td>23</td>
+												<td>0</td>
+											</tr>
+										</table>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane" id="tab-firefox">
+							<ul class="nav nav-tabs" role="tablist">
+									<li class="active">
+										<a href="#tab-qeast" role="tab" data-toggle="tab">东部联盟</a>
+									</li>
+									<li>
+										<a href="#tab-qwest" role="tab" data-toggle="tab">西部联盟排名</a>
+									</li>
+								</ul>
+								<div class="tab-content">
+									<div class="tab-pane active" id="tab-qeast">
+										<div class="fq">大西洋分区</div>
+										<table class="table">
+											<tr>
+												<th>排名</th>
+												<th>姓名</th>
+												<th>胜</th>
+												<th>负</th>
+												<th>胜场差</th>
+											</tr>
+											<tr>
+												<td>01</td>
+												<td>猛龙</td>
+												<td>59</td>
+												<td>23</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<td>02</td>
+												<td>凯尔特人</td>
+												<td>59</td>
+												<td>23</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<td>03</td>
+												<td>76人</td>
+												<td>59</td>
+												<td>23</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<td>04</td>
+												<td>尼克斯</td>
+												<td>59</td>
+												<td>23</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<td>05</td>
+												<td>篮网</td>
+												<td>59</td>
+												<td>23</td>
+												<td>0</td>
+											</tr>
+										</table>
+										<div class="fq">中央分区</div>
+										<table class="table">
+											<tr>
+												<th>排名</th>
+												<th>姓名</th>
+												<th>胜</th>
+												<th>负</th>
+												<th>胜场差</th>
+											</tr>
+											<tr>
+												<td>01</td>
+												<td>骑士</td>
+												<td>59</td>
+												<td>23</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<td>02</td>
+												<td>步行者</td>
+												<td>59</td>
+												<td>23</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<td>03</td>
+												<td>雄鹿</td>
+												<td>59</td>
+												<td>23</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<td>04</td>
+												<td>活塞</td>
+												<td>59</td>
+												<td>23</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<td>05</td>
+												<td>公牛</td>
+												<td>59</td>
+												<td>23</td>
+												<td>0</td>
+											</tr>
+										</table>
+										<div class="fq">东南分区</div>
+										<table class="table">
+											<tr>
+												<th>排名</th>
+												<th>姓名</th>
+												<th>胜</th>
+												<th>负</th>
+												<th>胜场差</th>
+											</tr>
+											<tr>
+												<td>01</td>
+												<td>热火</td>
+												<td>59</td>
+												<td>23</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<td>02</td>
+												<td>奇才</td>
+												<td>59</td>
+												<td>23</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<td>03</td>
+												<td>黄蜂</td>
+												<td>59</td>
+												<td>23</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<td>04</td>
+												<td>魔术</td>
+												<td>59</td>
+												<td>23</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<td>05</td>
+												<td>老鹰</td>
+												<td>59</td>
+												<td>23</td>
+												<td>0</td>
+											</tr>
+										</table>
+									</div>
+									<div class="tab-pane" id="tab-qwest">
+										<div class="fq">西北分区</div>
+										<table class="table">
+											<tr>
+												<th>排名</th>
+												<th>姓名</th>
+												<th>胜</th>
+												<th>负</th>
+												<th>胜场差</th>
+											</tr>
+											<tr>
+												<td>01</td>
+												<td>开拓者</td>
+												<td>59</td>
+												<td>23</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<td>02</td>
+												<td>雷霆</td>
+												<td>59</td>
+												<td>23</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<td>03</td>
+												<td>爵士</td>
+												<td>59</td>
+												<td>23</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<td>04</td>
+												<td>森林狼</td>
+												<td>59</td>
+												<td>23</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<td>05</td>
+												<td>掘金</td>
+												<td>59</td>
+												<td>23</td>
+												<td>0</td>
+											</tr>
+										</table>
+										<div class="fq">太平洋分区</div>
+										<table class="table">
+											<tr>
+												<th>排名</th>
+												<th>姓名</th>
+												<th>胜</th>
+												<th>负</th>
+												<th>胜场差</th>
+											</tr>
+											<tr>
+												<td>01</td>
+												<td>勇士</td>
+												<td>59</td>
+												<td>23</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<td>02</td>
+												<td>快船</td>
+												<td>59</td>
+												<td>23</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<td>03</td>
+												<td>湖人</td>
+												<td>59</td>
+												<td>23</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<td>04</td>
+												<td>国王</td>
+												<td>59</td>
+												<td>23</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<td>05</td>
+												<td>太阳</td>
+												<td>59</td>
+												<td>23</td>
+												<td>0</td>
+											</tr>
+										</table>
+										<div class="fq">西南分区</div>
+										<table class="table">
+											<tr>
+												<th>排名</th>
+												<th>姓名</th>
+												<th>胜</th>
+												<th>负</th>
+												<th>胜场差</th>
+											</tr>
+											<tr>
+												<td>01</td>
+												<td>火箭</td>
+												<td>59</td>
+												<td>23</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<td>02</td>
+												<td>鹈鹕</td>
+												<td>59</td>
+												<td>23</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<td>03</td>
+												<td>马刺</td>
+												<td>59</td>
+												<td>23</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<td>04</td>
+												<td>独行侠</td>
+												<td>59</td>
+												<td>23</td>
+												<td>0</td>
+											</tr>
+											<tr>
+												<td>05</td>
+												<td>灰熊</td>
+												<td>59</td>
+												<td>23</td>
+												<td>0</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="video cl">
+			<style>
+				.vd-b>li{float:left;width:280px;height:240px;margin-right:12px}
+			</style>
+				<ul class="nav nav-tabs" role="tablist" id="myTab">
+					<li style="margin-right:30px;padding-top:10px">视频</li>
+					<li role="presentation"><a href="#game" role="tab" data-toggle="tab">比赛</a></li>
+					<li role="presentation"><a href="#best" role="tab" data-toggle="tab">最佳</a></li>
+					<li role="presentation"><a href="#subject" role="tab" data-toggle="tab">专题</a></li>
+					<a href="#" class="fr">更多 &gt </a>
+				</ul>
+				<div id="myTabContent" class="tab-content">
+						<div role="tabpanel" class="tab-pane active" id="game">
+								<ul class="vd-b cl">
+										<li><a href="#"><img src="image/video/5.jpg" alt="123"><span>视频-17-18赛季欧洲步过人集锦</span></a></li>
+										<li><a href="#"><img src="image/video/5.jpg" alt="123"><span>视频-17-18赛季欧洲步过人集锦</span></a></li>
+										<li><a href="#"><img src="image/video/5.jpg" alt="123"><span>视频-17-18赛季欧洲步过人集锦</span></a></li>
+										<li><a href="#"><img src="image/video/5.jpg" alt="123"><span>视频-17-18赛季欧洲步过人集锦</span></a></li>
+										<li><a href="#"><img src="image/video/5.jpg" alt="123"><span>视频-17-18赛季欧洲步过人集锦</span></a></li>
+										<li><a href="#"><img src="image/video/5.jpg" alt="123"><span>视频-17-18赛季欧洲步过人集锦</span></a></li>
+										<li><a href="#"><img src="image/video/5.jpg" alt="123"><span>视频-17-18赛季欧洲步过人集锦</span></a></li>
+										<li><a href="#"><img src="image/video/5.jpg" alt="123"><span>视频-17-18赛季欧洲步过人集锦</span></a></li>
+								</ul>
+						</div>
+						<div role="tabpanel" class="tab-pane" id="best">
+								<ul class="vd-b cl">
+										<li><a href="#"><img src="image/video/4.jpg" alt="123"><span>视频-詹姆斯vs湖人第一次对决 幼詹惜败科比</span></a></li>
+										<li><a href="#"><img src="image/video/4.jpg" alt="123"><span>视频-詹姆斯vs湖人第一次对决 幼詹惜败科比</span></a></li>
+										<li><a href="#"><img src="image/video/4.jpg" alt="123"><span>视频-詹姆斯vs湖人第一次对决 幼詹惜败科比</span></a></li>
+										<li><a href="#"><img src="image/video/4.jpg" alt="123"><span>视频-詹姆斯vs湖人第一次对决 幼詹惜败科比</span></a></li>
+										<li><a href="#"><img src="image/video/4.jpg" alt="123"><span>视频-詹姆斯vs湖人第一次对决 幼詹惜败科比</span></a></li>
+										<li><a href="#"><img src="image/video/4.jpg" alt="123"><span>视频-詹姆斯vs湖人第一次对决 幼詹惜败科比</span></a></li>
+										<li><a href="#"><img src="image/video/4.jpg" alt="123"><span>视频-詹姆斯vs湖人第一次对决 幼詹惜败科比</span></a></li>
+										<li><a href="#"><img src="image/video/4.jpg" alt="123"><span>视频-詹姆斯vs湖人第一次对决 幼詹惜败科比</span></a></li>
+								</ul>
+						</div>
+						<div role="tabpanel" class="tab-pane" id="subject">
+								<ul class="vd-b cl">
+										<li><a href="#"><img src="image/video/3.jpg" alt="123"><span>视频-2017-18赛季浓眉哥精彩集锦</span></a></li>
+										<li><a href="#"><img src="image/video/3.jpg" alt="123"><span>视频-2017-18赛季浓眉哥精彩集锦</span></a></li>
+										<li><a href="#"><img src="image/video/3.jpg" alt="123"><span>视频-2017-18赛季浓眉哥精彩集锦</span></a></li>
+										<li><a href="#"><img src="image/video/3.jpg" alt="123"><span>视频-2017-18赛季浓眉哥精彩集锦</span></a></li>
+										<li><a href="#"><img src="image/video/3.jpg" alt="123"><span>视频-2017-18赛季浓眉哥精彩集锦</span></a></li>
+										<li><a href="#"><img src="image/video/3.jpg" alt="123"><span>视频-2017-18赛季浓眉哥精彩集锦</span></a></li>
+										<li><a href="#"><img src="image/video/3.jpg" alt="123"><span>视频-2017-18赛季浓眉哥精彩集锦</span></a></li>
+										<li><a href="#"><img src="image/video/3.jpg" alt="123"><span>视频-2017-18赛季浓眉哥精彩集锦</span></a></li>
+								</ul>
+						</div>
+				 </div>
+		</div>
+		<div class="sjw cl">
+			<style>
+				.sjw-c{float:left;width:18%;margin-right:23px}
+				.sjw-top{padding-top:10px;margin-right:30px}
+			</style>
+			<ul class="nav nav-tabs" role="tablist">
+				<li class="sjw-top">数据王</li>
+				<li role="presentation"><a href="#everyday" role="tab" data-toggle="tab">每日数据王</a></li>
+				<li role="presentation"><a href="#season" role="tab" data-toggle="tab">赛季数据网</a></li>
+				<a href="#" class="fr">更多</a>
+			</ul>
+			<div class="tab-content">
+				<div role="tabpanel" class="tab-pane active" id="everyday">
+						<div class="sjw-b cl">
+								<div class="sjw-c">
+									<div>得分</div>
+									<div><img src="image/sjw/6.jpg"/></div>
+									<div class="media">
+										<div class="media-left">
+											<a href="#">
+												<img class="media-object" src="image/sjw/7.jpg" alt="...">
+											</a>
+										 </div>
+											<div class="media-body">
+											<h4 class="media-heading">37</h4>
+											<h5 class="media-heading"><a href="">斯提分</a></h5>
+											<h5 class="media-heading"><a href="#">库里</a></h5>
+											<h5>30 后卫/勇士</h5>
+											</div>
+									</div>
+									<div class="media">
+										<div class="media-left media-middle">
+										<a href="#">
+											<img class="media-object" src="image/sjw/8.jpg" alt="...">
+										</a>
+										</div>
+										<div class="media-body">
+										<h5 class="media-heading"><a href="#">勒布朗詹姆斯</a><span class="fr">23</span></h5>
+										<h5 class="media-heading">23前锋-后卫/骑士</h5>
+										</div>
+									</div>
+									<div class="media">
+										<div class="media-left media-middle">
+										<a href="#">
+											<img class="media-object" src="image/sjw/8.jpg" alt="...">
+										</a>
+										</div>
+										<div class="media-body">
+										<h5 class="media-heading"><a href="#">勒布朗詹姆斯</a><span class="fr">20</span></h5>
+										<h5 class="media-heading">23前锋-后卫/骑士</h5>
+										</div>
+									</div>
+								</div>
+								<div class="sjw-c">
+										<div>得分</div>
+										<div><img src="image/sjw/6.jpg"/></div>
+										<div class="media">
+											<div class="media-left">
+												<a href="#">
+													<img class="media-object" src="image/sjw/7.jpg" alt="...">
+												</a>
+											 </div>
+												<div class="media-body">
+												<h4 class="media-heading">37</h4>
+												<h5 class="media-heading"><a href="">斯提分</a></h5>
+												<h5 class="media-heading"><a href="#">库里</a></h5>
+												<h5>30 后卫/勇士</h5>
+												</div>
+										</div>
+										<div class="media">
+											<div class="media-left media-middle">
+											<a href="#">
+												<img class="media-object" src="image/sjw/8.jpg" alt="...">
+											</a>
+											</div>
+											<div class="media-body">
+											<h5 class="media-heading"><a href="#">勒布朗詹姆斯</a><span class="fr">23</span></h5>
+											<h5 class="media-heading">23前锋-后卫/骑士</h5>
+											</div>
+										</div>
+										<div class="media">
+											<div class="media-left media-middle">
+											<a href="#">
+												<img class="media-object" src="image/sjw/8.jpg" alt="...">
+											</a>
+											</div>
+											<div class="media-body">
+											<h5 class="media-heading"><a href="#">勒布朗詹姆斯</a><span class="fr">20</span></h5>
+											<h5 class="media-heading">23前锋-后卫/骑士</h5>
+											</div>
+										</div>
+								</div>
+								<div class="sjw-c">
+										<div>得分</div>
+										<div><img src="image/sjw/6.jpg"/></div>
+										<div class="media">
+											<div class="media-left">
+												<a href="#">
+													<img class="media-object" src="image/sjw/7.jpg" alt="...">
+												</a>
+											 </div>
+												<div class="media-body">
+												<h4 class="media-heading">37</h4>
+												<h5 class="media-heading"><a href="">斯提分</a></h5>
+												<h5 class="media-heading"><a href="#">库里</a></h5>
+												<h5>30 后卫/勇士</h5>
+												</div>
+										</div>
+										<div class="media">
+											<div class="media-left media-middle">
+											<a href="#">
+												<img class="media-object" src="image/sjw/8.jpg" alt="...">
+											</a>
+											</div>
+											<div class="media-body">
+											<h5 class="media-heading"><a href="#">勒布朗詹姆斯</a><span class="fr">23</span></h5>
+											<h5 class="media-heading">23前锋-后卫/骑士</h5>
+											</div>
+										</div>
+										<div class="media">
+											<div class="media-left media-middle">
+											<a href="#">
+												<img class="media-object" src="image/sjw/8.jpg" alt="...">
+											</a>
+											</div>
+											<div class="media-body">
+											<h5 class="media-heading"><a href="#">勒布朗詹姆斯</a><span class="fr">20</span></h5>
+											<h5 class="media-heading">23前锋-后卫/骑士</h5>
+											</div>
+										</div>
+								</div>
+								<div class="sjw-c">
+										<div>得分</div>
+										<div><img src="image/sjw/6.jpg"/></div>
+										<div class="media">
+											<div class="media-left">
+												<a href="#">
+													<img class="media-object" src="image/sjw/7.jpg" alt="...">
+												</a>
+											 </div>
+												<div class="media-body">
+												<h4 class="media-heading">37</h4>
+												<h5 class="media-heading"><a href="">斯提分</a></h5>
+												<h5 class="media-heading"><a href="#">库里</a></h5>
+												<h5>30 后卫/勇士</h5>
+												</div>
+										</div>
+										<div class="media">
+											<div class="media-left media-middle">
+											<a href="#">
+												<img class="media-object" src="image/sjw/8.jpg" alt="...">
+											</a>
+											</div>
+											<div class="media-body">
+											<h5 class="media-heading"><a href="#">勒布朗詹姆斯</a><span class="fr">23</span></h5>
+											<h5 class="media-heading">23前锋-后卫/骑士</h5>
+											</div>
+										</div>
+										<div class="media">
+											<div class="media-left media-middle">
+											<a href="#">
+												<img class="media-object" src="image/sjw/8.jpg" alt="...">
+											</a>
+											</div>
+											<div class="media-body">
+											<h5 class="media-heading"><a href="#">勒布朗詹姆斯</a><span class="fr">20</span></h5>
+											<h5 class="media-heading">23前锋-后卫/骑士</h5>
+											</div>
+										</div>
+								</div>
+								<div class="sjw-c">
+										<div>得分</div>
+										<div><img src="image/sjw/6.jpg"/></div>
+										<div class="media">
+											<div class="media-left">
+												<a href="#">
+													<img class="media-object" src="image/sjw/7.jpg" alt="...">
+												</a>
+											 </div>
+												<div class="media-body">
+												<h4 class="media-heading">37</h4>
+												<h5 class="media-heading"><a href="">斯提分</a></h5>
+												<h5 class="media-heading"><a href="#">库里</a></h5>
+												<h5>30 后卫/勇士</h5>
+												</div>
+										</div>
+										<div class="media">
+											<div class="media-left media-middle">
+											<a href="#">
+												<img class="media-object" src="image/sjw/8.jpg" alt="...">
+											</a>
+											</div>
+											<div class="media-body">
+											<h5 class="media-heading"><a href="#">勒布朗詹姆斯</a><span class="fr">23</span></h5>
+											<h5 class="media-heading">23前锋-后卫/骑士</h5>
+											</div>
+										</div>
+										<div class="media">
+											<div class="media-left media-middle">
+											<a href="#">
+												<img class="media-object" src="image/sjw/8.jpg" alt="...">
+											</a>
+											</div>
+											<div class="media-body">
+											<h5 class="media-heading"><a href="#">勒布朗詹姆斯</a><span class="fr">20</span></h5>
+											<h5 class="media-heading">23前锋-后卫/骑士</h5>
+											</div>
+										</div>
+								</div>
+							</div>
+				</div>
+				<div role="tabpanel" class="tab-pane" id="season">
+					<div class="sjw-b cl">
+						<div class="sjw-c">
+									<div>场均得分</div>
+									<div><img src="image/sjw/2.jpg"/></div>
+									<div class="media">
+										<div class="media-left">
+											<a href="#">
+												<img class="media-object" src="image/sjw/1.jpg" alt="...">
+											</a>
+										 </div>
+											<div class="media-body">
+											<h4 class="media-heading">34</h4>
+											<h5 class="media-heading"><a href="#">勒布朗</a></h5>
+											<h5 class="media-heading"><a href="#">詹姆斯</a></h5>
+											<h5>23 前锋-后卫/勇士</h5>
+											</div>
+									</div>
+									<div class="media">
+										<div class="media-left media-middle">
+										<a href="#">
+											<img class="media-object" src="image/sjw/3.jpg" alt="...">
+										</a>
+										</div>
+										<div class="media-body">
+										<h5 class="media-heading"><a href="#">安东尼-戴维斯</a><span class="fr">23</span></h5>
+										<h5 class="media-heading">23前锋-中锋/鹈鹕</h5>
+										</div>
+									</div>
+									<div class="media">
+										<div class="media-left media-middle">
+											<a href="#">
+												<img class="media-object" src="image/sjw/4.jpg" alt="...">
+											</a>
+										</div>
+										<div class="media-body">
+											<h5 class="media-heading"><a href="#">拉塞尔-维斯布鲁克</a><span class="fr">20</span></h5>
+											<h5 class="media-heading">0 后卫/雷霆</h5>
+										</div>
+									</div>
+						</div>
+						<div class="sjw-c">
+								<div>场均得分</div>
+								<div><img src="image/sjw/2.jpg"/></div>
+								<div class="media">
+									<div class="media-left">
+										<a href="#">
+											<img class="media-object" src="image/sjw/1.jpg" alt="...">
+										</a>
+									 </div>
+										<div class="media-body">
+										<h4 class="media-heading">34</h4>
+										<h5 class="media-heading"><a href="#">勒布朗</a></h5>
+										<h5 class="media-heading"><a href="#">詹姆斯</a></h5>
+										<h5>23 前锋-后卫/勇士</h5>
+										</div>
+								</div>
+								<div class="media">
+									<div class="media-left media-middle">
+									<a href="#">
+										<img class="media-object" src="image/sjw/3.jpg" alt="...">
+									</a>
+									</div>
+									<div class="media-body">
+									<h5 class="media-heading"><a href="#">安东尼-戴维斯</a><span class="fr">23</span></h5>
+									<h5 class="media-heading">23前锋-中锋/鹈鹕</h5>
+									</div>
+								</div>
+								<div class="media">
+									<div class="media-left media-middle">
+										<a href="#">
+											<img class="media-object" src="image/sjw/4.jpg" alt="...">
+										</a>
+									</div>
+									<div class="media-body">
+										<h5 class="media-heading"><a href="#">拉塞尔-维斯布鲁克</a><span class="fr">20</span></h5>
+										<h5 class="media-heading">0 后卫/雷霆</h5>
+									</div>
+								</div>
+						</div>
+						<div class="sjw-c">
+								<div>场均得分</div>
+								<div><img src="image/sjw/2.jpg"/></div>
+								<div class="media">
+									<div class="media-left">
+										<a href="#">
+											<img class="media-object" src="image/sjw/1.jpg" alt="...">
+										</a>
+									 </div>
+										<div class="media-body">
+										<h4 class="media-heading">34</h4>
+										<h5 class="media-heading"><a href="#">勒布朗</a></h5>
+										<h5 class="media-heading"><a href="#">詹姆斯</a></h5>
+										<h5>23 前锋-后卫/勇士</h5>
+										</div>
+								</div>
+								<div class="media">
+									<div class="media-left media-middle">
+									<a href="#">
+										<img class="media-object" src="image/sjw/3.jpg" alt="...">
+									</a>
+									</div>
+									<div class="media-body">
+									<h5 class="media-heading"><a href="#">安东尼-戴维斯</a><span class="fr">23</span></h5>
+									<h5 class="media-heading">23前锋-中锋/鹈鹕</h5>
+									</div>
+								</div>
+								<div class="media">
+									<div class="media-left media-middle">
+										<a href="#">
+											<img class="media-object" src="image/sjw/4.jpg" alt="...">
+										</a>
+									</div>
+									<div class="media-body">
+										<h5 class="media-heading"><a href="#">拉塞尔-维斯布鲁克</a><span class="fr">20</span></h5>
+										<h5 class="media-heading">0 后卫/雷霆</h5>
+									</div>
+								</div>
+						</div>
+						<div class="sjw-c">
+								<div>场均得分</div>
+								<div><img src="image/sjw/2.jpg"/></div>
+								<div class="media">
+									<div class="media-left">
+										<a href="#">
+											<img class="media-object" src="image/sjw/1.jpg" alt="...">
+										</a>
+									 </div>
+										<div class="media-body">
+										<h4 class="media-heading">34</h4>
+										<h5 class="media-heading"><a href="#">勒布朗</a></h5>
+										<h5 class="media-heading"><a href="#">詹姆斯</a></h5>
+										<h5>23 前锋-后卫/勇士</h5>
+										</div>
+								</div>
+								<div class="media">
+									<div class="media-left media-middle">
+									<a href="#">
+										<img class="media-object" src="image/sjw/3.jpg" alt="...">
+									</a>
+									</div>
+									<div class="media-body">
+									<h5 class="media-heading"><a href="#">安东尼-戴维斯</a><span class="fr">23</span></h5>
+									<h5 class="media-heading">23前锋-中锋/鹈鹕</h5>
+									</div>
+								</div>
+								<div class="media">
+									<div class="media-left media-middle">
+										<a href="#">
+											<img class="media-object" src="image/sjw/4.jpg" alt="...">
+										</a>
+									</div>
+									<div class="media-body">
+										<h5 class="media-heading"><a href="#">拉塞尔-维斯布鲁克</a><span class="fr">20</span></h5>
+										<h5 class="media-heading">0 后卫/雷霆</h5>
+									</div>
+								</div>
+						</div>
+						<div class="sjw-c">
+								<div>场均得分</div>
+								<div><img src="image/sjw/2.jpg"/></div>
+								<div class="media">
+									<div class="media-left">
+										<a href="#">
+											<img class="media-object" src="image/sjw/1.jpg" alt="...">
+										</a>
+									 </div>
+										<div class="media-body">
+										<h4 class="media-heading">34</h4>
+										<h5 class="media-heading"><a href="#">勒布朗</a></h5>
+										<h5 class="media-heading"><a href="#">詹姆斯</a></h5>
+										<h5>23 前锋-后卫/勇士</h5>
+										</div>
+								</div>
+								<div class="media">
+									<div class="media-left media-middle">
+									<a href="#">
+										<img class="media-object" src="image/sjw/3.jpg" alt="...">
+									</a>
+									</div>
+									<div class="media-body">
+									<h5 class="media-heading"><a href="#">安东尼-戴维斯</a><span class="fr">23</span></h5>
+									<h5 class="media-heading">23前锋-中锋/鹈鹕</h5>
+									</div>
+								</div>
+								<div class="media">
+									<div class="media-left media-middle">
+										<a href="#">
+											<img class="media-object" src="image/sjw/4.jpg" alt="...">
+										</a>
+									</div>
+									<div class="media-body">
+										<h5 class="media-heading"><a href="#">拉塞尔-维斯布鲁克</a><span class="fr">20</span></h5>
+										<h5 class="media-heading">0 后卫/雷霆</h5>
+									</div>
+								</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="zt cl">
+		<style>
+			.ztt-l>div{width:30%;;height:160px;float:left;margin:5px 5px;overflow: hidden}
+			.ztt-l>div img{width:100%}
+			.ztt-l{width:65%}
+			.ztt-r{width:30%}
+			.dc-top{border:1px solid black;background: lightblue;color:white;text-align:center;margin-bottom:20px}
+			.dc-button{padding-left:110px}
+			.dc-bottom{margin-top:10px}
+			.zt-foot li{float:left;border:1px solid black;width:13%;margin:5px 5px}
+		</style>
+			<h2>专题</h2>
+			<div class="zt-top">
+				<div class="ztt-l fl">
+					<div><a href="#"><img src="image/zt/9.jpg"/></a></div>
+					<div><a href="#"><img src="image/zt/1.jpg"/></a></div>
+					<div><a href="#"><img src="image/zt/2.jpg"/></a></div>
+					<div><a href="#"><img src="image/zt/3.jpg"/></a></div>
+					<div><a href="#"><img src="image/zt/4.jpg"/></a></div>
+					<div><a href="#"><img src="image/zt/5.jpg"/></a></div>
+				</div>
+				<div class="ztt-r fr">
+					<div class="dc">
+						<div class="dc-top">调查</div>
+						<h5>你如何评价火箭休赛期的运作？</h5>
+						<ul>
+							<li><input type="radio"/>完美</li>
+							<li><input type="radio"/>完美</li>
+							<li><input type="radio"/>完美</li>
+							<li><input type="radio"/>完美</li>
+							<li><input type="radio"/>完美</li>
+						</ul>
+						<div class="dc-button">
+							<input type="button" value="提交" class="btn btn-primary btn active" style="margin-right:5px"/>
+							<input type="button" value="查看" class="btn btn-default btn active" />
+						</div>
+					</div>
+					<div class="dc-bottom"><img src="image/10.jpg" /></div>
+				</div>
+			</div>
+			<div class="zt-foot cl">
+				<ul>
+					<li><a href="#"><img src="image/11.jpg" /></a></li>
+					<li><a href="#"><img src="image/11.jpg" /></a></li>
+					<li><a href="#"><img src="image/11.jpg" /></a></li>
+					<li><a href="#"><img src="image/11.jpg" /></a></li>
+					<li><a href="#"><img src="image/11.jpg" /></a></li>
+					<li><a href="#"><img src="image/11.jpg" /></a></li>
+					<li><a href="#"><img src="image/11.jpg" /></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<footer class="container cl pt20">
+	<div class="footlist">
+		<dl>
+			<dt>关于</dt>
+			<dd><a href="#">NBA Store</a></dd>
+			<dd><a href="#">NBA就职机会</a></dd>
+		</dl>
+		<dl>
+			<dt>NBA赛事</dt>
+			<dd><a href="#">选秀大会</a></dd>
+			<dd><a href="#">jr.NBA高中生</a></dd>
+		</dl>
+		<dl>
+			<dt>专题</dt>
+			<dd><a href="#">休赛季转换</a></dd>
+			<dd><a href="#">联盟的骄傲</a></dd>
+			<dd><a href="#">新春贺岁</a></dd>
+			<dd><a href="#">扣响盛夏</a></dd>
+		</dl>
+		<dl>
+			<dt>NBA101</dt>
+			<dd><a href="#">NBA 历史</a></dd>
+			<dd><a href="#">50大球星</a></dd>
+		</dl>
+		<dl>
+			<dt>关于</dt>
+			<dd><a href="#">NBA Store</a></dd>
+			<dd><a href="#">NBA就职机会</a></dd>
+		</dl>
+		<dl>
+			<dt>关于</dt>
+			<dd><a href="#">NBA Store</a></dd>
+			<dd><a href="#">NBA就职机会</a></dd>
+		</dl>
+	</div>
+	<div class="foottitle cl">
+		<p>©2018年著作权 NBA 中国所有权。</p>
+		<p>NBA.com/China上除去使用条款中所特别提及的部分之外，其它任何内容都不得以任何形式被复制、再传播，或篡改。</p>
+		<p>进入NBA.com/China后，即表示阁下同意遵守NBA.com/China的隐私政策和使用条款。</p>
+		<p>有任何的建议和意见，都欢迎联络我们：NBAChinaInfo@nba.com</p>
+		<p>有关NBA商品授权合作事宜，敬请联系:GMGChinaBusinessInquiry@nba.com</p>
+	</div>
+	</footer>
+  </body>
+</html>
